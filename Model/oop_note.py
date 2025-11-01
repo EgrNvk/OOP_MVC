@@ -16,5 +16,3 @@ class Note:
     @text.setter
     def text(self, value):
         self.__text = value
-
-# 1) Добавить метод поиска заметки по заголовку

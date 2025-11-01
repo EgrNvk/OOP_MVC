@@ -8,7 +8,7 @@ class ConsoleView:
 
     def showAll(self):
         for elem in self.__noteController.getAll():
-            print(f"${elem.title()}\n${elem.text()}\n\n")
+            print(f"{elem.title}\n{elem.text}\n")
     def add(self):
         print("Enter title ")
         title = input()
@@ -25,4 +25,9 @@ class ConsoleView:
     def find_by_title(self):
         title = input("Введіть шаблон пошуку ")
         note=self.__noteController.find_by_title(title)
+
+        if note:
+            print(f"Знайдено шаблон пошуку - {title} \n\tTitle: {note.title}\n\tText: {note.text}\n")
+        else:
+            print(f"Не знайдено {title}")
 

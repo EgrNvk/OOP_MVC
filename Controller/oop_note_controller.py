@@ -11,8 +11,8 @@ class NoteController:
         return self.__notes
 
 # 1) Добавить метод поиска заметки по заголовку
-def find_by_title(self, title):
-    for element in self.__notes:
-        if element.title == title:
-            return element
+    def find_by_title(self, title):
+        for element in self.__notes:
+            if element.title == title:
+                return element
         return None
